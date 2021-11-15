@@ -18,7 +18,8 @@ docker run -p 8080:8080 javamark/keycloak-x
 
 ### Access Admin Console
 
-Open http://localhost:8080/auth/ in a browser and login as admin:admin. now you can two realms "master" and "quarkus"
+Open http://localhost:8080/auth/admin/master/console/#/realms/quarkus in a browser and login as admin:admin. 
+
 
 ## How it works
 
@@ -29,7 +30,7 @@ Open http://localhost:8080/auth/ in a browser and login as admin:admin. now you 
         * import-realms.sh - import realms with `kcadm` - [Keycloak Admin CLI](https://github.com/keycloak/keycloak-documentation/blob/main/server_admin/topics/admin-cli.adoc)
         * wait-for.sh - wait until keycloak is started and the master realm is available
     * run the `kc config` command 
-    * add the healthcheck - the container is healthy if the **Quarkus** realm is available
+    * add the healthcheck - the container becomes healthy as soon as the **Quarkus** realm is available
     * overwrite the entrypoint script with the custom script
 
 
