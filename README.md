@@ -27,8 +27,8 @@ Open http://localhost:8080/auth/admin/master/console/#/realms/quarkus in a brows
     * copy the quarkus-realm.json - [security-keycloak-authorization-quickstart](https://github.com/quarkusio/quarkus-quickstarts/tree/main/security-keycloak-authorization-quickstart)
     * copy the helper scripts
         * [entrypoint-wrapper.sh](entrypoint-wrapper.sh) - custom entrypoint script - [Run multiple services in a container](https://docs.docker.com/config/containers/multi-service_container/)
-        * import-realms.sh - import realms with `kcadm` - [Keycloak Admin CLI](https://github.com/keycloak/keycloak-documentation/blob/main/server_admin/topics/admin-cli.adoc)
-        * wait-for.sh - wait until keycloak is started and the master realm is available
+        * [import-realms.sh](import-realms.sh) - import realms with `kcadm` - [Keycloak Admin CLI](https://github.com/keycloak/keycloak-documentation/blob/main/server_admin/topics/admin-cli.adoc)
+        * [wait-for.sh](wait-for.sh) - wait until keycloak is started and the master realm is available
     * run the `kc config` command 
     * add the healthcheck - the container becomes healthy as soon as the **Quarkus** realm is available
     * overwrite the entrypoint script with the custom script
@@ -90,8 +90,8 @@ ENTRYPOINT "./entrypoint-wrapper.sh"
 ---
 # References
 
-* Entrypoint wrapper script source:
+* Entrypoint wrapper script:
 https://docs.docker.com/config/containers/multi-service_container/
-* Realm config source:
+* Realm config:
 https://github.com/quarkusio/quarkus-quickstarts/tree/main/security-keycloak-authorization-quickstart
 * Keycloak Admin CLI: https://github.com/keycloak/keycloak-documentation/blob/main/server_admin/topics/admin-cli.adoc
